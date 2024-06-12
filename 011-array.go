@@ -18,5 +18,16 @@ func main() {
         20,
     }
     
+    var val1 = [...]int8{
+        20,
+        50,
+        50,
+    }
+    
     fmt.Println(val)
+    println(len(names))
+    println(len(val))
+    val1[1] = 100
+    println(len(val1))
+    println(val1[1])
 }
