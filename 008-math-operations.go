@@ -21,4 +21,15 @@ func main() {
     println(a)
     a %= 3
     println(a)
+    
+    //unary operator 
+    
+    negative := -7
+    a++
+    b--
+    boolean := !true
+    println(negative)
+    println(a)
+    println(b)
+    println(boolean)
 }
