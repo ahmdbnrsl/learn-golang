@@ -60,11 +60,34 @@ func kali(numbers ...int) int {
     return hasil
 }
 
-type Math func(numbers ...int) int // type declaration
+type Math func(...int) int // type declaration
 
-func math(plus, kali Math, numbers ...int) (int, int) {
+func math(pluss, kalis Math, numbers ...int) (int, int) {
     fmt.Println(numbers)
-    return plus(numbers...), kali(numbers...)
+    return pluss(numbers...), kalis(numbers...)
+}
+
+//anonymous function
+type Blacklist func(string) bool
+
+func register(name string, blacklist Blacklist) {
+    if blacklist(name) {
+        println("hehe love you")
+    } else {
+        println("who are you?")
+    }
+}
+
+//recursive function
+func factorial(value int) int {
+    if value == 1 {
+        println(1)
+        return 1
+    } else {
+        result := value * factorial(value - 1)
+        println(result)
+        return result
+    }
 }
 
 func main() {
@@ -97,4 +120,20 @@ func main() {
     println(goodBye("Beni"))
     //Function as parameter
     println(math(plus, kali, 10, 10))
+    //anonymous function 
+    register("Via", func(name string) bool {
+        return name == "Via"
+    })
+    //recursive function
+    factorial(10)
+    //clousure
+    count := 0
+    increment := func() {
+        println(count)
+        count++
+    }
+    
+    increment()
+    increment()
+    println(count)
 }
