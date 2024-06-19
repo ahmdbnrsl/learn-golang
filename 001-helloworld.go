@@ -2,6 +2,14 @@ package main
 
 import "fmt"
 
+type Console struct{}
+
+func (console Console) log(data any) {
+    fmt.Println(data)
+}
+
 func main() {
-    fmt.Println("Hello World")
+    console := Console{}
+    
+    console.log("Hello World!!")
 }
