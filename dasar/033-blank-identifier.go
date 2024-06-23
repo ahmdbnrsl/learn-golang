@@ -1,7 +1,7 @@
 package main
 
 import (
-    _"belajar-golang/internal"
+    _"dasar/internal"
     "fmt"
 )
 
