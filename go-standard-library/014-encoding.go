@@ -24,7 +24,7 @@ func main() {
     // CSV READER
     csvString := "Via,Fitriana,Beni\n" +
     "budi,wahyu,arnaf\n" +
-    "chindy,tyan,agus"
+    "chindy,tyan,aguss"
     
     reader := csv.NewReader(strings.NewReader(csvString))
     

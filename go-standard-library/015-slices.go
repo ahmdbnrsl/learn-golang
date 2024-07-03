@@ -9,7 +9,7 @@ func main() {
     names := []string{
         "Via",
         "Fitriana",
-        "Beni",
+        "Benni",
     }
     values := []int{
         19,
@@ -20,5 +20,5 @@ func main() {
     fmt.Println(slices.Min(values))
     fmt.Println(slices.Max(values))
     fmt.Println(slices.Contains(names, "Via"))
-    fmt.Println(slices.Index(names, "Beni"))
+    fmt.Println(slices.Index(names, "Benni"))
 }

@@ -17,5 +17,5 @@ func main() {
     fmt.Println(filepath.Ext("golang/main/module.zig"))
     fmt.Println(filepath.IsAbs("golang/main/module.zig"))
     fmt.Println(filepath.IsLocal("golang/main/module.zig"))
-    fmt.Println(filepath.Join("golang", "main", "module.zig"))
+    fmt.Println(filepath.Join("golang", "main", "module.go"))
 }
