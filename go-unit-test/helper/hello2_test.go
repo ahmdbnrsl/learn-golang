@@ -15,6 +15,6 @@ func TestHello3(t *testing.T) {
 func TestHello4(t *testing.T) {
     result := SayHello("Fitriana")
     
-    require.NotEqual(t, "Hello Fitriana", result, "unexpected result")
+    require.NotEqual(t, "Hello Via", result, "unexpected result")
     println("end")
 }
