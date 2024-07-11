@@ -62,6 +62,46 @@ func TestHelloTable(t *testing.T) {
     
 }
 
+func BenchmarkSayHello(b *testing.B) {
+    b.Run("Beni", func(b *testing.B) {
+        for i := 0; i < b.N; i++ {
+            SayHello("Beni")
+        }
+    })
+    b.Run("Via", func(b *testing.B) {
+        for i := 0; i < b.N; i++ {
+            SayHello("Via")
+        }
+    })
+}
+
+func BenchmarkTable(b *testing.B) {
+    benchmarks := []struct {
+        name string
+        request string
+        
+    } {
+        {
+            name: "SayHello(Via)",
+            request: "Via",
+            
+        },
+        {
+            name: "SayHello(Fitriana)",
+            request: "Fitriana",
+            
+        },
+    }
+    for _, benchmark := range benchmarks {
+        b.Run(benchmark.name, func(b *testing.B) {
+            for i := 0; i < b.N; i++ {
+                SayHello(benchmark.request)
+            }
+        })
+    }
+    
+}
+
 func TestSkip(t *testing.T) {
     if runtime.GOOS == "android" {
         t.Skip("Your operating system is not supported!")
