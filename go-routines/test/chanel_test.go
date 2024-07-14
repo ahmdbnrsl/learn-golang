@@ -24,3 +24,29 @@ func TestChannel(t *testing.T) {
     
     
 }
+
+func TestChannel2(t *testing.T) {
+    channel := make(chan int)
+    
+    go func() {
+        channel <- 10  //Memasukan data ke dalam channel
+    }()
+    go func() {
+        fmt.Println(<- channel)
+    }()
+    time.Sleep(3 * time.Second)
+}
+
+func pow(params int) chan int {
+    channel := make(chan int)
+    go func(it int) {
+        channel <- it * it
+    }(params)
+    return channel
+}
+
+func TestAsyncFunction(t *testing.T) {
+    a := pow(20)
+    b := pow(10)
+    fmt.Println(<- a, <-b)
+}
