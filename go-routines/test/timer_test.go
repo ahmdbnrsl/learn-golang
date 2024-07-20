@@ -23,7 +23,7 @@ func TestAfter(t *testing.T) {
 	fmt.Println(time)
 }
 
-func TestAfterFunc(t *testing.T) {
+func TestAfterFuncc(t *testing.T) {
 	group := sync.WaitGroup{}
 	group.Add(1)
 
