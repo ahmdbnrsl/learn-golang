@@ -15,7 +15,7 @@ func TestTimer(t *testing.T) {
 	fmt.Println(time)
 }
 
-func TestAfter(t *testing.T) {
+func TestAfters(t *testing.T) {
 	channel := time.After(5 * time.Second)
 	fmt.Println(time.Now())
 
