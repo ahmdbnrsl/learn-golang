@@ -4,7 +4,7 @@ import "testing"
 import "net/http"
 import "fmt"
 
-func TestServer(t *testing.T) {
+func Test1Server(t *testing.T) {
     var handler http.HandlerFunc = func(writer http.ResponseWriter, request *http.Request) {
         fmt.Fprint(writer, "Hello World")
     }
