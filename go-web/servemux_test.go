@@ -19,7 +19,7 @@ func Test2ServeMux(t *testing.T) {
     })
     
     handler.HandleFunc("/images/thumb", func(writer http.ResponseWriter, request *http.Request) {
-        fmt.Fprint(writer, "Hallo thumb")
+        fmt.Fprint(writer, "Hallo thumb.")
     })
     
     server := http.Server{

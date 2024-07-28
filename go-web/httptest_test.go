@@ -7,7 +7,7 @@ import "fmt"
 import "io"
 
 func SayHelloHandler(writer http.ResponseWriter, request *http.Request) {
-    fmt.Fprint(writer, "Hello World")
+    fmt.Fprint(writer, "Hello")
 }
 
 func Test4HttpTest(t *testing.T) {

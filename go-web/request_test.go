@@ -12,7 +12,7 @@ func Test3Request(t *testing.T) {
         } else if request.RequestURI == "/admin" {
             fmt.Fprintln(writer, "You now in a admin page")
         } else {
-            fmt.Fprintln(writer, "Oops you're lost")
+            fmt.Fprintln(writer, "Oops you're lost...")
         }
     }
     
