@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+    <head>
+        <meta
+            http-equiv="content-type"
+            content="text/html; charset=utf-8"
+        />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <title></title>
+    </head>
+    <body>
+        {{if ge .Value 90}}
+        <h1>Good</h1>
+        {{else if ge .Value 80}}
+        <h1>reasonable</h1>
+        {{else}}
+        <h1>Nice try</h1>
+        {{end}}
+    </body>
+</html>
